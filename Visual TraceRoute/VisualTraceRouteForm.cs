@@ -10,6 +10,7 @@ using GMap.NET;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using System.Configuration;
+using System.Globalization;
 
 namespace Visual_TraceRoute
 {
@@ -35,8 +36,8 @@ namespace Visual_TraceRoute
 		private void AddMapMarker(string coordinates, int markerNumber)
 		{
 			string[] latlong = coordinates.Split(',');
-			double latitude = Convert.ToDouble(latlong[0]);
-			double longitude = Convert.ToDouble(latlong[1]);
+			double latitude = Convert.ToDouble(latlong[0], CultureInfo.InvariantCulture);
+			double longitude = Convert.ToDouble(latlong[1], CultureInfo.InvariantCulture);
 			GMapMarker marker = new GMarkerGoogle(new PointLatLng(latitude, longitude), GMarkerGoogleType.blue_small);
 			marker.ToolTipText = markerNumber.ToString();
 			marker.ToolTip.Fill = Brushes.Black;
@@ -53,10 +54,10 @@ namespace Visual_TraceRoute
 		{
 			string[] previousLatLong = previousCoordinates.Split(',');
 			string[] newLatLong = newCoordinates.Split(',');
-			double previousLatitude = Convert.ToDouble(previousLatLong[0]);
-			double previousLongitude = Convert.ToDouble(previousLatLong[1]);
-			double newLatitude = Convert.ToDouble(newLatLong[0]);
-			double newLongitude = Convert.ToDouble(newLatLong[1]);
+			double previousLatitude = Convert.ToDouble(previousLatLong[0], CultureInfo.InvariantCulture);
+			double previousLongitude = Convert.ToDouble(previousLatLong[1], CultureInfo.InvariantCulture);
+			double newLatitude = Convert.ToDouble(newLatLong[0], CultureInfo.InvariantCulture);
+			double newLongitude = Convert.ToDouble(newLatLong[1], CultureInfo.InvariantCulture);
 			List<PointLatLng> points = new List<PointLatLng>();
 			points.Add(new PointLatLng(previousLatitude, previousLongitude));
 			points.Add(new PointLatLng(newLatitude, newLongitude));

@@ -29,9 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualTraceRouteForm));
 			this.domainTextBox = new Guna.UI2.WinForms.Guna2TextBox();
 			this.goButton = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +47,13 @@
 			this.maxHopeLabel = new System.Windows.Forms.Label();
 			this.maxHopsNumericUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
 			this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+			this.hopColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.delayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.addressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.orgColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.countryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.changeMapProviderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.bingdefaultToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,13 +66,6 @@
 			this.yandexdefaultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.yandexhybridToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.yandexsatelliteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.hopColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.delayColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.addressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.orgColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.countryColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.coordinatesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.timeoutNumericUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxHopsNumericUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -281,20 +281,20 @@
 			// dataGridView
 			// 
 			this.dataGridView.AllowUserToOrderColumns = true;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-			this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
 			this.dataGridView.BackgroundColor = System.Drawing.Color.White;
 			this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.dataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+			this.dataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hopColumn,
             this.delayColumn,
@@ -303,14 +303,14 @@
             this.cityColumn,
             this.countryColumn,
             this.coordinatesColumn});
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dataGridView.EnableHeadersVisualStyles = false;
 			this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dataGridView.Location = new System.Drawing.Point(2, 606);
@@ -343,6 +343,61 @@
 			this.dataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
 			this.dataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DataGridView_RowsAdded);
+			// 
+			// hopColumn
+			// 
+			this.hopColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.hopColumn.HeaderText = "# Hop";
+			this.hopColumn.Name = "hopColumn";
+			this.hopColumn.ReadOnly = true;
+			this.hopColumn.Width = 70;
+			// 
+			// delayColumn
+			// 
+			this.delayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.delayColumn.HeaderText = "Delay (ms)";
+			this.delayColumn.Name = "delayColumn";
+			this.delayColumn.ReadOnly = true;
+			// 
+			// addressColumn
+			// 
+			this.addressColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.addressColumn.HeaderText = "IP Address";
+			this.addressColumn.Name = "addressColumn";
+			this.addressColumn.ReadOnly = true;
+			this.addressColumn.Width = 150;
+			// 
+			// orgColumn
+			// 
+			this.orgColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.orgColumn.HeaderText = "Organization";
+			this.orgColumn.Name = "orgColumn";
+			this.orgColumn.ReadOnly = true;
+			this.orgColumn.Width = 240;
+			// 
+			// cityColumn
+			// 
+			this.cityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.cityColumn.HeaderText = "City";
+			this.cityColumn.Name = "cityColumn";
+			this.cityColumn.ReadOnly = true;
+			this.cityColumn.Width = 160;
+			// 
+			// countryColumn
+			// 
+			this.countryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.countryColumn.HeaderText = "Country Code";
+			this.countryColumn.Name = "countryColumn";
+			this.countryColumn.ReadOnly = true;
+			this.countryColumn.Width = 110;
+			// 
+			// coordinatesColumn
+			// 
+			this.coordinatesColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.coordinatesColumn.HeaderText = "Coordinates (lat., long.)";
+			this.coordinatesColumn.Name = "coordinatesColumn";
+			this.coordinatesColumn.ReadOnly = true;
+			this.coordinatesColumn.Width = 192;
 			// 
 			// menuStrip1
 			// 
@@ -441,61 +496,6 @@
 			this.yandexsatelliteToolStripMenuItem.Text = "Yandex (satellite)";
 			this.yandexsatelliteToolStripMenuItem.Click += new System.EventHandler(this.YandexsatelliteToolStripMenuItem_Click);
 			// 
-			// hopColumn
-			// 
-			this.hopColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.hopColumn.HeaderText = "# Hop";
-			this.hopColumn.Name = "hopColumn";
-			this.hopColumn.ReadOnly = true;
-			this.hopColumn.Width = 70;
-			// 
-			// delayColumn
-			// 
-			this.delayColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.delayColumn.HeaderText = "Delay (ms)";
-			this.delayColumn.Name = "delayColumn";
-			this.delayColumn.ReadOnly = true;
-			// 
-			// addressColumn
-			// 
-			this.addressColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.addressColumn.HeaderText = "IP Address";
-			this.addressColumn.Name = "addressColumn";
-			this.addressColumn.ReadOnly = true;
-			this.addressColumn.Width = 150;
-			// 
-			// orgColumn
-			// 
-			this.orgColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.orgColumn.HeaderText = "Organization";
-			this.orgColumn.Name = "orgColumn";
-			this.orgColumn.ReadOnly = true;
-			this.orgColumn.Width = 240;
-			// 
-			// cityColumn
-			// 
-			this.cityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.cityColumn.HeaderText = "City";
-			this.cityColumn.Name = "cityColumn";
-			this.cityColumn.ReadOnly = true;
-			this.cityColumn.Width = 160;
-			// 
-			// countryColumn
-			// 
-			this.countryColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.countryColumn.HeaderText = "Country Code";
-			this.countryColumn.Name = "countryColumn";
-			this.countryColumn.ReadOnly = true;
-			this.countryColumn.Width = 110;
-			// 
-			// coordinatesColumn
-			// 
-			this.coordinatesColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.coordinatesColumn.HeaderText = "Coordinates (lat., long.)";
-			this.coordinatesColumn.Name = "coordinatesColumn";
-			this.coordinatesColumn.ReadOnly = true;
-			this.coordinatesColumn.Width = 192;
-			// 
 			// VisualTraceRouteForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,7 +520,7 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
 			this.Name = "VisualTraceRouteForm";
-			this.Text = "Visual TraceRoute v1.0.0.0 - MIT License © Clément Campagna 2020";
+			this.Text = "Visual TraceRoute v1.1.0.0 - MIT License © 2020 Clément Campagna";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.timeoutNumericUpDown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.maxHopsNumericUpDown)).EndInit();

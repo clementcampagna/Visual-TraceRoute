@@ -5,7 +5,7 @@ However, it does not rely on the tracert command itself but rather uses C# ping 
 \
 Download Visual TraceRoute and see it for yourself today!\
 \
-[![Visual-TraceRoute-v1.0.0.0-Screenshot-1.jpg](/Visual%20TraceRoute%20v1.0.0.0%20-%20Screenshot%201.jpg)](https://github.com/clementcampagna/Visual-TraceRoute/releases/download/v1.0.0.0/Visual.TraceRoute.v1.0.0.0.7z)
+[![Visual-TraceRoute-v1.0.0.0-Screenshot-1.jpg](/Visual%20TraceRoute%20v1.0.0.0%20-%20Screenshot%201.jpg)](https://github.com/clementcampagna/Visual-TraceRoute/releases/download/v1.1.0.0/Visual.TraceRoute.v1.1.0.0.zip)
 
 ### Configuration:
 
